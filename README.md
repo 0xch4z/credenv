@@ -2,19 +2,39 @@
 
 > Add your credentials to your environment in a single command
 
-### Usage
+## Installation
 
-#### Set your credential environment variables
+```sh
+go get -u github.com/charliekenney23/credenv
+```
+
+## Usage
+
+```sh
+credenv SOURCE
+```
+
+### View your credential environment variables for a given source
+
+```sh
+credenv aws
+# sources credentials from ~/.aws/credentials and outputs:
+# export AWS_ACCESS_KEY_ID='XXXXXXXXXXXXXXXX'
+# export AWS_SECRET_ACCESS_KEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+```
+
+### Set your credential environment variables for a given source
 
 ```sh
 eval `credenv aws`
 ```
 
-#### View your credential environment variables
+## Supported Sources
 
-```sh
-credenv aws
-# outputs:
-# export AWS_ACCESS_KEY_ID='XXXXXXXXXXXXXXXX'
-# export AWS_SECRET_ACCESS_KEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-```
+- [AWS](https://aws.com)
+
+<br>
+
+---
+
+&copy; 2019 [Charles Kenney](https://github.com/charliekenney23)
