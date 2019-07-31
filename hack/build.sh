@@ -32,7 +32,7 @@ clean() {
 ensure_gox_installed() {
   if ! which gox > /dev/null; then
     echo 'Installing gox...'
-    go get -u github.com/mitchellh/gox
+    GO111MODULE=off go get -u github.com/mitchellh/gox
   fi
 }
 
@@ -60,8 +60,8 @@ ldflags: ${LD_FLAGS}
 ========================================================
 "
 
-  LD_FLAGS="-X ${PKG}.GitCommit=${GIT_COMMIT} $LDFLAGS"
-  LD_FLAGS="-X ${PKG}.Version=${CREDENV_VERSION} $LDFLAGS"
+  LD_FLAGS="-s -w -X ${PKG}.Version=${CREDENV_VERSION} $LD_FLAGS"
+  LD_FLAGS="-X ${PKG}.GitCommit=${GIT_COMMIT} $LD_FLAGS"
 
   (cd cmd/credenv; gox -os="${BUILD_OS}" \
     -arch="${BUILD_ARCHS}" \
