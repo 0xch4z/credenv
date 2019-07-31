@@ -4,6 +4,11 @@ REPO    := github.com/charliekenney23/credenv
 HACK_DIR     := ./hack
 BUILD_SCRIPT := $(HACK_DIR)/build.sh
 
+all: test build
+
+test:
+	go test -v ./...
+
 build:
 	CREDENV_VERSION=$(VERSION) bash $(BUILD_SCRIPT)
 
