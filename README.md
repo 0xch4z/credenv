@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-go get -u github.com/charliekenney23/credenv
+go get -u github.com/charliekenney23/credenv/cmd/credenv
 ```
 
 ## Usage
