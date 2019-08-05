@@ -1,6 +1,6 @@
 # credenv [![Build Status][travis-ci-badge]][travis-ci] [![GoDoc][godoc-badge]][godoc]
 
-> Add your credentials to your environment in a single command
+> Add your cloud credentials to your environment in a single command
 
 ## Installation
 
