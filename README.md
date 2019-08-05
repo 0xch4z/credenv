@@ -1,4 +1,4 @@
-# credenv
+# credenv [![Build Status][travis-ci-badge]][travis-ci] [![GoDoc][godoc-badge]][godoc]
 
 > Add your credentials to your environment in a single command
 
@@ -39,3 +39,8 @@ eval `credenv aws`
 ---
 
 &copy; 2019 [Charles Kenney](https://github.com/charliekenney23)
+
+[travis-ci-badge]: https://travis-ci.org/Charliekenney23/credenv.svg?branch=master
+[travis-ci]: https://travis-ci.org/Charliekenney23/credenv
+[godoc-badge]: https://godoc.org/github.com/Charliekenney23/credenv?status.svg
+[godoc]: https://godoc.org/github.com/Charliekenney23/credenv
