@@ -34,10 +34,12 @@ func printEnvironment(e env.Environment) {
 func getEnvironmentSource(c *cli.Context, src string) Source {
 	var s Source
 	switch src {
-	case "pulumi":
-		s = &source.Pulumi{}
 	case "aws":
 		s = &source.AWS{}
+	case "linode":
+		s = &source.Linode{}
+	case "pulumi":
+		s = &source.Pulumi{}
 	default:
 		log.Fatalf("Unsupported source `%s`\n", src)
 	}
