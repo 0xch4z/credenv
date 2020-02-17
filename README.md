@@ -32,6 +32,7 @@ eval `credenv aws`
 ## Supported Sources
 
 - [AWS](https://aws.com)
+- [Linode](https://linode.com)
 - [Pulumi](https://pulumi.io)
 
 <br>
